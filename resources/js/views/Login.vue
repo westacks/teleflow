@@ -6,7 +6,7 @@
             </div>
 
             <div class="card-body text-center">
-                <telegram-auth/>
+                <telegram-auth mode="callback" @callback="login"/>
             </div>
         </div>
     </div>
@@ -18,6 +18,11 @@ import TelegramAuth from '../components/TelegramAuth.vue'
 export default {
     components: {
         TelegramAuth
-    }
+    },
+    methods: {
+        login(user) {
+            console.log(user);
+        }
+    },
 }
 </script>
