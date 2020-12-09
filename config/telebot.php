@@ -4,10 +4,10 @@ use App\Services\Telegram\Commands\StartCommand;
 
 return [
 
-    'default' => 'teleflow_test_bot',
+    'default' => env('TELEGRAM_BOT_NAME'),
 
     'bots' => [
-        'teleflow_test_bot' => [
+        env('TELEGRAM_BOT_NAME') => [
             'token' => env('TELEGRAM_BOT_TOKEN'),
             'handlers' => [
                 StartCommand::class
