@@ -31,19 +31,27 @@ $dropdown-color: null !default;
 
 $item-font-size: 14px !default;
 $item-line-height: 30px !default;
-$item-padding: 10px 15px !default;
-$icon-height: 35px !default;
-$icon-width: 35px !default;
+$item-padding: 10px 12px !default;
+$icon-height: 32px !default;
+$icon-width: 32px !default;
 
 @import '~vue-sidebar-menu/src/scss/vue-sidebar-menu.scss';
 
-.v-sidebar-menu { 
+.v-sidebar-menu {
     transition: 0.5s max-width ease;
 
     .vsm--toggle-btn {
+        height: 65px;
+        background-color: #fff;
+        border-top  : 1px solid #E3EAEF;
+
         &:focus {
             outline: none;
         }
+    }
+
+    .vsm--link_active {
+        color: $primary-color !important;
     }
 
     .vsm--link {

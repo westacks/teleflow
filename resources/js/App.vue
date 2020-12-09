@@ -1,5 +1,11 @@
 <template>
-    <default/>
+    <div id="app">
+        <component v-if="layout" :is="layout">
+            <transition name="fade" mode="out-in">
+                <router-view></router-view>
+            </transition>
+        </component>
+    </div>
 </template>
 
 <script>
@@ -10,6 +16,11 @@ export default {
     components: {
         Auth,
         Default
+    },
+    computed: {
+        layout() {
+            return this.$route.meta.layout || false;
+        }
     }
 }
 </script>
