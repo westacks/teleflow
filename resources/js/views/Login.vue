@@ -14,6 +14,7 @@
 
 <script>
 import TelegramAuth from '../components/TelegramAuth.vue'
+import api from '../api';
 
 export default {
     components: {
@@ -21,7 +22,14 @@ export default {
     },
     methods: {
         login(user) {
-            console.log(user);
+            api.authLogin(user).then(res => {
+                localStorage.setItem('token', JSON.stringify(res.data));
+
+                api.authUser().then(res => {
+                    this.$store.commit('setUser', res.data)
+                    this.$router.push({name: 'home'});
+                })
+            })
         }
     },
 }

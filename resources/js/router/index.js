@@ -12,21 +12,39 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            name: 'Home',
+            name: 'home',
             component: () => import('../views/Home.vue'),
             meta: {
-                layout: 'Default'
+                layout: 'Default',
+                auth: true
             }
         },
         {
             path: '/login',
-            name: 'Login',
+            name: 'login',
             component: () => import('../views/Login.vue'),
             meta: {
-                layout: 'Auth'
+                layout: 'Auth',
+                auth: false
             }
         }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    let authenticated = localStorage.getItem("token") ? true : false;
+
+    // // Route exists
+    // if(!to.matched.length) {
+    //     return next({name: 'NotFound'});
+    // }
+
+    // Auth guard
+    if(to.matched.some(record => record.meta.auth === !authenticated)) {
+        return next({ name: authenticated ? "home" : "login" });
+    }
+
+    return next();
+});
 
 export default router
