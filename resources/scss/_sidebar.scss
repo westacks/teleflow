@@ -40,17 +40,17 @@ $icon-width: 32px !default;
 .v-sidebar-menu {
     transition: 0.5s max-width ease;
 
-    .vsm--toggle-btn {
-        height: 65px;
-        background-color: #fff;
-        border-top  : 1px solid #E3EAEF;
-
-        &:focus {
-            outline: none;
+    @media only screen and (max-width: 1024px) {
+        &.vsm_collapsed {
+            overflow: hidden;
         }
     }
 
-    .vsm--link_active {
+    .vsm--toggle-btn {
+        display: none;
+    }
+
+    .vsm--link_active.vsm--link_level-2 {
         color: $primary-color !important;
     }
 

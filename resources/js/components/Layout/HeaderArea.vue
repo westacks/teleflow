@@ -3,6 +3,10 @@
         <div class="navbar-bg"></div>
         <nav class="navbar navbar-expand-lg main-navbar">
             <form class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                    <li><a href="#" v-on:click.prevent="navToggle" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                    <li><a href="#" v-on:click.prevent="searchToggle" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+                </ul>
                 <div class="search-element">
                     <input class="form-control" type="text" placeholder="Search" aria-label="Search" data-width="250"
                         style="width: 250px;">
@@ -224,3 +228,19 @@
         </nav>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        navToggle() {
+            let toggle = document.getElementsByClassName('vsm--toggle-btn')[0] ?? null
+            if (toggle) {
+                toggle.click();
+            }
+        },
+        searchToggle() {
+            document.body.classList.add('search-show');
+        }
+    }
+}
+</script>
