@@ -2,11 +2,15 @@
     <div>
         <div class="card card-primary">
             <div class="card-header">
-                <h4>Login</h4>
+                <h4 class="m-auto">Welcome to TeleFlow!</h4>
             </div>
 
             <div class="card-body text-center">
                 <telegram-auth mode="callback" @callback="login"/>
+            </div>
+
+            <div class="card-footer text-center">
+                Login using you Telegram account to start manage your channels.
             </div>
         </div>
     </div>
