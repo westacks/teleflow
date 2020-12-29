@@ -3,10 +3,14 @@
         <sidebar-menu :menu="menu" width="250px" :collapsed="collapsed" :width-collapsed="`${sidebar_width}px`" @toggle-collapse="onToggleCollapse">
             <template v-slot:header>
                 <div class="sidebar-brand">
-                    <router-link to="/">TeleFlow</router-link>
+                    <router-link to="/">
+                        <img src="../../../images/logo-row.svg" alt="logo" height="30">
+                    </router-link>
                 </div>
                 <div class="sidebar-brand sidebar-brand-sm">
-                    <router-link to="/">TF</router-link>
+                    <router-link to="/">
+                        <img src="../../../images/logo.svg" alt="logo" height="30">
+                    </router-link>
                 </div>
             </template>
         </sidebar-menu>

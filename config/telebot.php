@@ -1,6 +1,7 @@
 <?php
 
 use App\Services\Telegram\Commands\StartCommand;
+use App\Services\Telegram\Handlers\LoginHandler;
 
 return [
 
@@ -11,7 +12,13 @@ return [
             'token' => env('TELEGRAM_BOT_TOKEN'),
             'name' => env('TELEGRAM_BOT_NAME'),
             'handlers' => [
-                StartCommand::class
+                // Login
+                LoginHandler::class,
+
+                // Command handlers
+                StartCommand::class,
+
+                // Other handlers
             ]
         ]
     ]
