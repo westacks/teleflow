@@ -14,6 +14,10 @@ import Default from './layouts/Default.vue'
 import api from './api'
 
 export default {
+    metaInfo: {
+        title: 'Loading',
+        titleTemplate: '%s | ' + process.env.MIX_APP_NAME
+    },
     components: {
         Auth,
         Default

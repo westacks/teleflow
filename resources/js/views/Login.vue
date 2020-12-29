@@ -21,6 +21,9 @@ import TelegramAuth from '../components/TelegramAuth.vue'
 import api from '../api';
 
 export default {
+    metaInfo: {
+        title: 'Login',
+    },
     components: {
         TelegramAuth
     },

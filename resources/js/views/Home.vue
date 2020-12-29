@@ -31,3 +31,11 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    metaInfo: {
+        title: 'Dashboard',
+    }
+}
+</script>

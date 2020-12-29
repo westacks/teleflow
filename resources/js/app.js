@@ -8,11 +8,13 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import VueMeta from 'vue-meta'
 import App from './App.vue'
 import router from './router'
 import store from './store'
 
 Vue.prototype.moment = () => window.moment;
+Vue.use(VueMeta);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
