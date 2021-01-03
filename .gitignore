@@ -16,3 +16,6 @@ yarn-error.log
 /public/images
 /public/js
 /public/mix-manifest.json
+
+session.madeline
+session.madeline.lock
