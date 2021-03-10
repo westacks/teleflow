@@ -67,7 +67,9 @@
         "compile": [
             "@php artisan migrate:fresh",
             "@php artisan telebot:webhook -S",
-            "@php artisan telebot:commands -S",
+            "@php artisan telebot:commands -S"
+        ],
+        "warmup": [
             "@php artisan optimize"
         ]
     }

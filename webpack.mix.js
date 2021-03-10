@@ -13,7 +13,7 @@ const webpack = require('webpack');
  */
 
 mix
-    .js('resources/js/app.js', 'public/js')
+    .js('resources/js/app.js', 'public/js').vue()
     .sass('resources/scss/app.scss', 'public/css')
     .copyDirectory('resources/images', 'public/images')
     .webpackConfig({
