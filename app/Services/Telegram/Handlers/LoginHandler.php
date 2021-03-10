@@ -4,6 +4,7 @@ namespace App\Services\Telegram\Handlers;
 
 use App\Models\User;
 use WeStacks\TeleBot\Objects\Update;
+use WeStacks\TeleBot\TeleBot;
 
 /**
  * This handler stores Telegram and app user instances to retrive them later from singleton anywhere.
@@ -12,7 +13,7 @@ use WeStacks\TeleBot\Objects\Update;
  */
 class LoginHandler extends UpdateHandler
 {
-    public static function trigger(Update $update)
+    public static function trigger(Update $update, TeleBot $bot)
     {
         return true;
     }
@@ -21,7 +22,6 @@ class LoginHandler extends UpdateHandler
     {
         $telegram = $this->update->user();
         $user = User::find($telegram->id);
-
         $this->auth->store($telegram, $user);
     }
 }
