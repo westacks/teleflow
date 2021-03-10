@@ -1,30 +1,33 @@
 {
-    "name": "laravel/laravel",
+    "name": "westacks/teleflow",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Professional Telegram channels CMS.",
     "keywords": [
-        "framework",
-        "laravel"
+        "telegram",
+        "channels",
+        "teleflow",
+        "cms",
+        "telebot"
     ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "danog/madelineproto": "^5.1",
+        "danog/madelineproto": "^6.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.1",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^8.32",
+        "laravel/tinker": "^2.6",
+        "laravel/ui": "^3.2",
         "tymon/jwt-auth": "^1.0",
-        "westacks/telebot": "^1.6"
+        "westacks/telebot": "^1.8"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
-        "mockery/mockery": "^1.4.2",
-        "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3"
+        "mockery/mockery": "^1.4.3",
+        "nunomaduro/collision": "^5.3",
+        "phpunit/phpunit": "^9.5.2"
     },
     "config": {
         "optimize-autoloader": true,
@@ -61,10 +64,11 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ],
-        "post-install-cmd": [
+        "compile": [
             "@php artisan migrate:fresh",
             "@php artisan telebot:webhook -S",
-            "@php artisan telebot:commands -S"
+            "@php artisan telebot:commands -S",
+            "@php artisan optimize"
         ]
     }
 }
