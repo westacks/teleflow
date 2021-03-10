@@ -6,8 +6,7 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
-
+import Vue from 'vue'
 import VueMeta from 'vue-meta'
 import App from './App.vue'
 import router from './router'
@@ -22,7 +21,7 @@ Vue.use(VueMeta);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+new Vue({
     el: '#app',
     router,
     store,
