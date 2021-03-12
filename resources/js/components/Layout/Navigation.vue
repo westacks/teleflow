@@ -4,12 +4,12 @@
             <template v-slot:header>
                 <div class="sidebar-brand">
                     <router-link to="/">
-                        <img src="../../../images/logo-row.svg" alt="logo" height="30">
+                        <img src="/../../../images/logo-row.svg" alt="logo" height="30">
                     </router-link>
                 </div>
                 <div class="sidebar-brand sidebar-brand-sm">
                     <router-link to="/">
-                        <img src="../../../images/logo.svg" alt="logo" height="30">
+                        <img src="/../../../images/logo.svg" alt="logo" height="30">
                     </router-link>
                 </div>
             </template>
