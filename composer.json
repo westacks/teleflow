@@ -12,6 +12,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "codedge/laravel-selfupdater": "^3.2",
         "danog/madelineproto": "^6.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
