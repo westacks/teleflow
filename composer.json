@@ -22,10 +22,13 @@
         "laravel/ui": "^3.2",
         "mad-web/laravel-initializer": "^3.3",
         "mehradsadeghi/laravel-filter-querystring": "^1.1",
+        "spatie/laravel-backup": "^6.15",
         "tymon/jwt-auth": "^1.0",
         "westacks/telebot": "^1.9"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.5",
+        "beyondcode/laravel-query-detector": "^1.5",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.4.3",

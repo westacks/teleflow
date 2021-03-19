@@ -42,7 +42,7 @@ return [
             'repository_vendor' => 'westacks',
             'repository_name' => 'teleflow',
             'repository_url' => 'git@github.com:westacks/teleflow.git',
-            'download_path' => storage_path('app/updates'),
+            'download_path' => storage_path('app/temp'),
             'private_access_token' => env('SELF_UPDATER_GITHUB_PRIVATE_ACCESS_TOKEN', ''),
             'use_branch' => env('SELF_UPDATER_USE_BRANCH', ''),
         ]
