@@ -19,6 +19,7 @@
         "laravel/framework": "^8.33",
         "laravel/tinker": "^2.6",
         "laravel/ui": "^3.2",
+        "mehradsadeghi/laravel-filter-querystring": "^1.1",
         "tymon/jwt-auth": "^1.0",
         "westacks/telebot": "^1.9"
     },

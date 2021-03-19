@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChannelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,5 @@ Route::group(['prefix' => 'auth'], function ($router) {
     Route::post('/refresh', [AuthController::class, 'refresh'])->name('refresh');
     Route::get('/user', [AuthController::class, 'user'])->name('user');
 });
+
+Route::apiResource('channels', ChannelController::class);

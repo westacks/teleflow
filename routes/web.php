@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\VueController;
+use App\Http\Controllers\FrontEndController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('{any?}', VueController::class)->where('any', '.*');
+Route::get('{any?}', [FrontEndController::class, 'main'])->where('any', '.*')->name('main');

@@ -25,13 +25,14 @@ class User extends Authenticatable implements JWTSubject
         'auth_date' => 'datetime',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
+        //
     ];
+
+    public function channels()
+    {
+        return $this->hasMany(Channel::class);
+    }
 
     public function getJWTIdentifier()
     {
