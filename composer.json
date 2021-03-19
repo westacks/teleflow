@@ -16,18 +16,18 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^8.32",
+        "laravel/framework": "^8.33",
         "laravel/tinker": "^2.6",
         "laravel/ui": "^3.2",
         "tymon/jwt-auth": "^1.0",
-        "westacks/telebot": "^1.8"
+        "westacks/telebot": "^1.9"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.4.3",
         "nunomaduro/collision": "^5.3",
-        "phpunit/phpunit": "^9.5.2"
+        "phpunit/phpunit": "^9.5.3"
     },
     "config": {
         "optimize-autoloader": true,
