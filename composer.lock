@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "86154a1a76c03e917ed9ce90d738e824",
+    "content-hash": "b09d22ca43d9f17abe4edf9954688935",
     "packages": [
         {
             "name": "amphp/amp",
@@ -4315,6 +4315,84 @@
             "time": "2018-11-22T07:55:51+00:00"
         },
         {
+            "name": "mad-web/laravel-initializer",
+            "version": "3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mad-web/laravel-initializer.git",
+                "reference": "ff969d3e2b6eebe23664808b8b4ee77f272d2061"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mad-web/laravel-initializer/zipball/ff969d3e2b6eebe23664808b8b4ee77f272d2061",
+                "reference": "ff969d3e2b6eebe23664808b8b4ee77f272d2061",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/bus": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/config": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/console": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/container": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+                "nunomaduro/laravel-console-task": "^1.5",
+                "php": "^7.2.5 || ^8.0",
+                "symfony/process": "^4.4.11 || ^5.0.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3",
+                "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "suggest": {
+                "laravel/framework": "Required to use additional MakeCronTask, MakeEchoServerConfig and MakeSupervisorConfig Jobs."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MadWeb\\Initializer\\InitializerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MadWeb\\Initializer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mad Web",
+                    "email": "madweb.dev@gmail.com",
+                    "homepage": "https://github.com/mad-web",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A convenient way to initialize your application",
+            "homepage": "https://github.com/mad-web/laravel-initializer",
+            "keywords": [
+                "Tasks",
+                "command",
+                "deploy",
+                "exec",
+                "init",
+                "initialize",
+                "install",
+                "laravel-initializer",
+                "mad-web",
+                "process",
+                "update"
+            ],
+            "support": {
+                "issues": "https://github.com/mad-web/laravel-initializer/issues",
+                "source": "https://github.com/mad-web/laravel-initializer/tree/3.3.1"
+            },
+            "time": "2020-12-20T00:38:40+00:00"
+        },
+        {
             "name": "mehradsadeghi/laravel-filter-querystring",
             "version": "v1.1.6",
             "source": {
@@ -4682,6 +4760,68 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.4"
             },
             "time": "2020-12-20T10:01:03+00:00"
+        },
+        {
+            "name": "nunomaduro/laravel-console-task",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nunomaduro/laravel-console-task.git",
+                "reference": "c49ffbb33d9a750e60a1f8649f2f6dcc4114990a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nunomaduro/laravel-console-task/zipball/c49ffbb33d9a750e60a1f8649f2f6dcc4114990a",
+                "reference": "c49ffbb33d9a750e60a1f8649f2f6dcc4114990a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.2.5|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5.8|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NunoMaduro\\LaravelConsoleTask\\LaravelConsoleTaskServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NunoMaduro\\LaravelConsoleTask\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "Laravel Console Task is a output method for your Laravel/Laravel Zero commands.",
+            "keywords": [
+                "artisan",
+                "cli",
+                "command-line",
+                "console",
+                "laravel",
+                "laravel-zero",
+                "php",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/nunomaduro/laravel-console-task/issues",
+                "source": "https://github.com/nunomaduro/laravel-console-task"
+            },
+            "time": "2020-10-30T14:47:00+00:00"
         },
         {
             "name": "opis/closure",
@@ -8197,16 +8337,16 @@
         },
         {
             "name": "westacks/telebot",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/westacks/telebot.git",
-                "reference": "2502229df280dd58bf67ec342b282d2493f952db"
+                "reference": "c10aebe633b6bca95e167cdc246bd503d0f04221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/westacks/telebot/zipball/2502229df280dd58bf67ec342b282d2493f952db",
-                "reference": "2502229df280dd58bf67ec342b282d2493f952db",
+                "url": "https://api.github.com/repos/westacks/telebot/zipball/c10aebe633b6bca95e167cdc246bd503d0f04221",
+                "reference": "c10aebe633b6bca95e167cdc246bd503d0f04221",
                 "shasum": ""
             },
             "require": {
@@ -8250,9 +8390,9 @@
             "homepage": "https://github.com/westacks/telebot",
             "support": {
                 "issues": "https://github.com/westacks/telebot/issues",
-                "source": "https://github.com/westacks/telebot/tree/1.9.0"
+                "source": "https://github.com/westacks/telebot/tree/1.9.1"
             },
-            "time": "2021-03-14T03:47:44+00:00"
+            "time": "2021-03-19T17:33:45+00:00"
         }
     ],
     "packages-dev": [

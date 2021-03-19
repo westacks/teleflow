@@ -42,9 +42,9 @@ return [
             'repository_vendor' => 'westacks',
             'repository_name' => 'teleflow',
             'repository_url' => 'git@github.com:westacks/teleflow.git',
-            'download_path' => '/tmp',
-            // 'private_access_token' => env('SELF_UPDATER_GITHUB_PRIVATE_ACCESS_TOKEN', ''),
-            // 'use_branch' => env('SELF_UPDATER_USE_BRANCH', ''),
+            'download_path' => storage_path('app/updates'),
+            'private_access_token' => env('SELF_UPDATER_GITHUB_PRIVATE_ACCESS_TOKEN', ''),
+            'use_branch' => env('SELF_UPDATER_USE_BRANCH', ''),
         ]
     ],
 
@@ -94,9 +94,9 @@ return [
 
     'notifications' => [
         'notifications' => [
-            // \Codedge\Updater\Notifications\Notifications\UpdateSucceeded::class => ['mail'],
-            // \Codedge\Updater\Notifications\Notifications\UpdateFailed::class => ['mail'],
-            // \Codedge\Updater\Notifications\Notifications\UpdateAvailable::class => ['mail'],
+            \Codedge\Updater\Notifications\Notifications\UpdateSucceeded::class => ['mail'],
+            \Codedge\Updater\Notifications\Notifications\UpdateFailed::class => ['mail'],
+            \Codedge\Updater\Notifications\Notifications\UpdateAvailable::class => ['mail'],
         ],
 
         /*
@@ -126,16 +126,10 @@ return [
 
     'artisan_commands' => [
         'pre_update' => [
-            'updater:prepare' => [
-                'class' => \App\Console\Commands\PreUpdateTasks::class,
-                'params' => []
-            ],
+            'down --retry=60'
         ],
         'post_update' => [
-            'updater:cleanup' => [
-                'class' => \App\Console\Commands\PostUpdateCleanup::class,
-                'params' => []
-            ]
+            'app:update'
         ],
     ],
 
