@@ -5,6 +5,8 @@ namespace App\Console\Commands;
 use Codedge\Updater\UpdaterManager;
 use Illuminate\Console\Command;
 use Codedge\Updater\SourceRepository;
+use Illuminate\Support\Facades\Artisan;
+use Symfony\Component\Console\Output\ConsoleOutput;
 
 class AutoUpdate extends Command
 {
@@ -13,6 +15,7 @@ class AutoUpdate extends Command
 
     public function handle(UpdaterManager $updater)
     {
+        $output = new ConsoleOutput();
         /** @var SourceRepository $repository */
         $repository = $updater->source();
 
@@ -29,14 +32,11 @@ class AutoUpdate extends Command
         $release = $repository->fetch($available);
 
         $this->info("Preparing for update...");
-        $repository->preUpdateArtisanCommands();
+        Artisan::call('down', ['--retry' => 60], $output);
 
-        $this->info("Updating application...");
+        $this->info("Updating application files...");
         $repository->update($release);
 
-        $this->info("Running post update tasks...");
-        $repository->postUpdateArtisanCommands();
-
-        $this->info("Successfully updated!");
+        Artisan::call('app:update', [], $output);
     }
 }

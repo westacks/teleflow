@@ -126,10 +126,10 @@ return [
 
     'artisan_commands' => [
         'pre_update' => [
-            'down --retry=60'
+            //
         ],
         'post_update' => [
-            'app:update'
+            //
         ],
     ],
 
